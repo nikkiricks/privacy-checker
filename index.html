@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Checker - GDPR Compliance Analyzer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <h1>🔒 Privacy Checker</h1>
+        <p class="tagline">GDPR Compliance Analyzer</p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="website">Website Scan</button>
+        <!-- <button class="tab-btn" data-tab="policy">Privacy Policy</button> -->
+        <button class="tab-btn" data-tab="about">About</button>
+      </div>
+
+      <!-- Website Scan Tab -->
+      <div class="tab-content active" id="website-tab">
+        <div class="scan-section">
+          <h2>Scan a Website</h2>
+          <p>Enter a URL to analyze cookies, trackers, consent banners, and security.</p>
+
+          <div class="input-group">
+            <input
+              type="url"
+              id="urlInput"
+              placeholder="https://example.com"
+              class="url-input"
+            >
+            <button id="scanBtn" class="btn btn-primary">Scan Website</button>
+          </div>
+
+          <div class="info-box">
+            <strong>Note:</strong> Due to browser security restrictions (CORS), this web app has limited ability to scan external websites. For now, this tool focuses on privacy policy analysis, which works perfectly without any limitations.
+          </div>
+        </div>
+      </div>
+
+      <!-- Privacy Policy Tab -->
+      <div class="tab-content" id="policy-tab">
+        <div class="scan-section">
+          <h2>Analyze Privacy Policy</h2>
+          <p>Paste your privacy policy or upload a file to check GDPR compliance.</p>
+
+          <div class="upload-section">
+            <label for="policyFile" class="file-label">
+              📄 Upload Privacy Policy (.txt, .md)
+              <input type="file" id="policyFile" accept=".txt,.md" hidden>
+            </label>
+            <span id="fileName" class="file-name"></span>
+          </div>
+
+          <div class="textarea-group">
+            <label for="policyText">Or paste your privacy policy here:</label>
+            <textarea
+              id="policyText"
+              rows="10"
+              placeholder="Paste your privacy policy text here..."
+              class="policy-textarea"
+            ></textarea>
+          </div>
+
+          <button id="analyzePolicyBtn" class="btn btn-primary">Analyze Policy</button>
+        </div>
+      </div>
+
+      <!-- About Tab -->
+      <div class="tab-content" id="about-tab">
+        <div class="about-section">
+          <h2>About Privacy Checker</h2>
+
+          <div class="about-content">
+            <h3>What is Privacy Checker?</h3>
+            <p>Privacy Checker is an automated GDPR compliance analyzer that helps you identify privacy issues on your website and ensure your privacy policy meets legal requirements. All analysis happens in your browser - your data never leaves your device.</p>
+
+            <h3>How We Calculate Your Score</h3>
+            <p>Your privacy score is based on checks against official GDPR requirements. Each check is weighted by priority:</p>
+            <ul>
+              <li><strong>High Priority</strong> (3x weight): Critical GDPR requirements like data controller information, user rights, and retention periods</li>
+              <li><strong>Medium Priority</strong> (2x weight): Important elements like DPO contact and processing purposes</li>
+              <li><strong>Low Priority</strong> (1x weight): Recommended best practices for enhanced transparency</li>
+            </ul>
+            <p>The final score represents the percentage of weighted checks that passed. Learn more about GDPR requirements from official sources:</p>
+            <ul>
+              <li><a href="https://gdpr-info.eu/" target="_blank" rel="noopener">Official GDPR Text (gdpr-info.eu)</a></li>
+              <li><a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/" target="_blank" rel="noopener">UK ICO GDPR Guidance</a></li>
+              <li><a href="https://commission.europa.eu/law/law-topic/data-protection_en" target="_blank" rel="noopener">European Commission Data Protection</a></li>
+            </ul>
+
+            <h3>What We Check</h3>
+
+            <div class="check-categories">
+              <div class="category-card">
+                <h4>🍪 Cookies</h4>
+                <ul>
+                  <li>Third-party cookies</li>
+                  <li>Secure & HttpOnly flags</li>
+                  <li>SameSite attributes</li>
+                  <li>Cookie expiration</li>
+                </ul>
+              </div>
+
+              <div class="category-card">
+                <h4>📊 Trackers</h4>
+                <ul>
+                  <li>Analytics services</li>
+                  <li>Social media trackers</li>
+                  <li>Advertising networks</li>
+                  <li>Browser fingerprinting</li>
+                </ul>
+              </div>
+
+              <div class="category-card">
+                <h4>✅ Consent</h4>
+                <ul>
+                  <li>Cookie banner presence</li>
+                  <li>Reject option availability</li>
+                  <li>Granular controls</li>
+                  <li>Pre-checked boxes</li>
+                </ul>
+              </div>
+
+              <div class="category-card">
+                <h4>🔐 Security</h4>
+                <ul>
+                  <li>HTTPS usage</li>
+                  <li>Security headers</li>
+                  <li>Mixed content</li>
+                  <li>HSTS configuration</li>
+                </ul>
+              </div>
+
+              <div class="category-card">
+                <h4>📋 Privacy Policy</h4>
+                <ul>
+                  <li>Data controller info</li>
+                  <li>User rights disclosure</li>
+                  <li>Data retention periods</li>
+                  <li>12+ GDPR requirements</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Open Source & Privacy-First</h3>
+            <p>Privacy Checker is open source and runs entirely in your browser. No data is sent to external servers. All analysis happens client-side, ensuring your privacy policies remain completely private.</p>
+
+            <h3>Simple & Fast</h3>
+            <p>Just upload or paste a privacy policy and get instant GDPR compliance feedback. No accounts, no setup, no complexity.</p>
+
+            <h3>About the Creator</h3>
+            <p>Created by <a href="https://www.linkedin.com/in/nikki-ricks/" target="_blank" rel="noopener">Nikki Ricks</a>, a privacy and compliance professional dedicated to making GDPR compliance accessible and understandable.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Section -->
+      <div id="results" class="results-section" style="display: none;">
+        <h2>Scan Results</h2>
+
+        <div class="score-container">
+          <div class="score-circle">
+            <div class="score-value" id="scoreValue">--</div>
+            <div class="score-label">Privacy Score</div>
+          </div>
+
+          <div class="score-summary">
+            <div class="summary-item summary-pass">
+              <div class="summary-number" id="passCount">0</div>
+              <div class="summary-label">Passed</div>
+            </div>
+            <div class="summary-item summary-fail">
+              <div class="summary-number" id="failCount">0</div>
+              <div class="summary-label">Failed</div>
+            </div>
+            <div class="summary-item summary-warn">
+              <div class="summary-number" id="warnCount">0</div>
+              <div class="summary-label">Warnings</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="checksContainer" class="checks-container"></div>
+
+        <div class="action-buttons">
+          <button id="exportBtn" class="btn btn-secondary">📥 Export Report</button>
+          <button id="newScanBtn" class="btn btn-secondary">🔄 New Scan</button>
+        </div>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p id="loadingText">Scanning...</p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Privacy Checker - Open Source GDPR Compliance Tool</p>
+      <p class="disclaimer">For informational purposes only. Not legal advice. Consult legal counsel for compliance questions.</p>
+    </footer>
+  </div>
+
+  <script src="lib/policy-analyzer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

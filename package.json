@@ -1,0 +1,29 @@
+{
+  "name": "privacy-checker",
+  "version": "0.1.0",
+  "description": "Simple web-based privacy policy analyzer for GDPR compliance",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "deploy:surge": "surge",
+    "deploy:netlify": "netlify deploy --prod"
+  },
+  "keywords": [
+    "privacy",
+    "gdpr",
+    "compliance",
+    "web-app",
+    "privacy-policy",
+    "analyzer",
+    "static-site"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/privacy-checker.git"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0",
+    "surge": "^0.23.1"
+  }
+}
