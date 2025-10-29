@@ -6,18 +6,18 @@ A simple, web-based privacy policy analyzer that runs entirely in your browser. 
 
 **Current Status:** Ready for initial deployment
 
-**Last Updated:** October 16, 2024
+**Last Updated:** October 27, 2025
 
-### Next Two Weeks Roadmap (Oct 16 - Oct 30, 2024)
+### Next Two Weeks Roadmap (Oct 27 - Nov 10, 2025)
 
-#### Week 1 (Oct 16 - Oct 23)
+#### Week 1 (Oct 27 - Nov 3)
 - [ ] Initial GitHub repository setup and push
 - [ ] Deploy to Netlify/Surge for live testing
 - [ ] User testing with sample privacy policies
 - [ ] Bug fixes and UI refinements based on feedback
 - [ ] Documentation improvements
 
-#### Week 2 (Oct 24 - Oct 30)
+#### Week 2 (Nov 4 - Nov 10)
 - [ ] Performance optimization for large policy documents
 - [ ] Enhanced error handling and user feedback
 - [ ] Mobile responsive design improvements
@@ -269,7 +269,7 @@ This is an open-source project focused on improving web privacy. Contributions w
 
 ## Resources
 
-- [GDPR Official Text](https://gdpr-info.eu/)
+- [Complete GDPR](https://gdpr.eu/)
 - [ICO Guidance](https://ico.org.uk/for-organisations/guide-to-data-protection/)
 - [Surge Documentation](https://surge.sh/help/)
 - [Netlify Documentation](https://docs.netlify.com/)

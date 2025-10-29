@@ -12,7 +12,7 @@
     <header class="header">
       <div class="header-content">
         <h1>🔒 Privacy Checker</h1>
-        <p class="tagline">GDPR Compliance Analyzer</p>
+        <p class="tagline">Find €310M+ in GDPR Fine Risk in 30 Seconds</p>
       </div>
     </header>
 
@@ -20,38 +20,15 @@
     <main class="main-content">
       <!-- Tabs -->
       <div class="tabs">
-        <button class="tab-btn active" data-tab="website">Website Scan</button>
-        <!-- <button class="tab-btn" data-tab="policy">Privacy Policy</button> -->
+        <button class="tab-btn active" data-tab="policy">Analyze Privacy Policy</button>
         <button class="tab-btn" data-tab="about">About</button>
       </div>
 
-      <!-- Website Scan Tab -->
-      <div class="tab-content active" id="website-tab">
-        <div class="scan-section">
-          <h2>Scan a Website</h2>
-          <p>Enter a URL to analyze cookies, trackers, consent banners, and security.</p>
-
-          <div class="input-group">
-            <input
-              type="url"
-              id="urlInput"
-              placeholder="https://example.com"
-              class="url-input"
-            >
-            <button id="scanBtn" class="btn btn-primary">Scan Website</button>
-          </div>
-
-          <div class="info-box">
-            <strong>Note:</strong> Due to browser security restrictions (CORS), this web app has limited ability to scan external websites. For now, this tool focuses on privacy policy analysis, which works perfectly without any limitations.
-          </div>
-        </div>
-      </div>
-
       <!-- Privacy Policy Tab -->
-      <div class="tab-content" id="policy-tab">
+      <div class="tab-content active" id="policy-tab">
         <div class="scan-section">
           <h2>Analyze Privacy Policy</h2>
-          <p>Paste your privacy policy or upload a file to check GDPR compliance.</p>
+          <p>Paste your privacy policy to discover hidden GDPR violations and calculate your estimated fine exposure. Get specific article references and risk-based recommendations in seconds.</p>
 
           <div class="upload-section">
             <label for="policyFile" class="file-label">
@@ -66,7 +43,17 @@
             <textarea
               id="policyText"
               rows="10"
-              placeholder="Paste your privacy policy text here..."
+              placeholder="Paste your privacy policy text here...
+
+Example: Privacy Policy
+
+Last updated: October 27, 2025
+
+1. Data Controller
+We are [Company Name], located at [Address]. Contact us at privacy@example.com.
+
+2. Data We Collect
+We collect personal information including your name, email address, and usage data..."
               class="policy-textarea"
             ></textarea>
           </div>
@@ -82,18 +69,19 @@
 
           <div class="about-content">
             <h3>What is Privacy Checker?</h3>
-            <p>Privacy Checker is an automated GDPR compliance analyzer that helps you identify privacy issues on your website and ensure your privacy policy meets legal requirements. All analysis happens in your browser - your data never leaves your device.</p>
+            <p>Privacy Checker is a <strong>financial risk-based GDPR compliance analyzer</strong> that calculates your estimated fine exposure based on actual enforcement actions. The average GDPR fine is €2.36 million, and violations in your privacy policy could cost you €310M or more. Simply paste your privacy policy text and get instant feedback with specific GDPR article references, financial risk assessment, and actionable recommendations. All analysis happens in your browser - your data never leaves your device.</p>
 
             <h3>How We Calculate Your Score</h3>
-            <p>Your privacy score is based on checks against official GDPR requirements. Each check is weighted by priority:</p>
+            <p>Your privacy score is based on <strong>financial risk analysis</strong> using actual GDPR fine amounts. Each requirement is weighted by the potential fine exposure from real enforcement actions:</p>
             <ul>
-              <li><strong>High Priority</strong> (3x weight): Critical GDPR requirements like data controller information, user rights, and retention periods</li>
-              <li><strong>Medium Priority</strong> (2x weight): Important elements like DPO contact and processing purposes</li>
-              <li><strong>Low Priority</strong> (1x weight): Recommended best practices for enhanced transparency</li>
+              <li><strong>Highest Risk</strong> (10x weight): Legal basis violations (€1.2B Meta fine), data transfers (€1.2B risk)</li>
+              <li><strong>High Risk</strong> (7-8x weight): Third-party sharing (€746M Amazon fine), automated decisions (€345M H&M fine)</li>
+              <li><strong>Medium Risk</strong> (4-6x weight): User rights (€225M WhatsApp fine), cookies (€90M Google fine), retention (€79M risk)</li>
+              <li><strong>Lower Risk</strong> (1-3x weight): DPO contact, data controller info, transparency requirements</li>
             </ul>
-            <p>The final score represents the percentage of weighted checks that passed. Learn more about GDPR requirements from official sources:</p>
+            <p>The score shows what percentage of financial risk you've mitigated. We also calculate your estimated fine exposure based on violations found. Learn more about GDPR requirements from official sources:</p>
             <ul>
-              <li><a href="https://gdpr-info.eu/" target="_blank" rel="noopener">Official GDPR Text (gdpr-info.eu)</a></li>
+              <li><a href="https://gdpr.eu/" target="_blank" rel="noopener">Complete GDPR (gdpr.eu)</a></li>
               <li><a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/" target="_blank" rel="noopener">UK ICO GDPR Guidance</a></li>
               <li><a href="https://commission.europa.eu/law/law-topic/data-protection_en" target="_blank" rel="noopener">European Commission Data Protection</a></li>
             </ul>
@@ -102,52 +90,52 @@
 
             <div class="check-categories">
               <div class="category-card">
-                <h4>🍪 Cookies</h4>
+                <h4>🏢 Controller Info</h4>
                 <ul>
-                  <li>Third-party cookies</li>
-                  <li>Secure & HttpOnly flags</li>
-                  <li>SameSite attributes</li>
-                  <li>Cookie expiration</li>
+                  <li>Data controller identity</li>
+                  <li>Contact details</li>
+                  <li>DPO information</li>
+                  <li>Art. 13.1.a-b GDPR</li>
                 </ul>
               </div>
 
               <div class="category-card">
-                <h4>📊 Trackers</h4>
+                <h4>📊 Processing Details</h4>
                 <ul>
-                  <li>Analytics services</li>
-                  <li>Social media trackers</li>
-                  <li>Advertising networks</li>
-                  <li>Browser fingerprinting</li>
+                  <li>Purpose of processing</li>
+                  <li>Legal basis</li>
+                  <li>Data categories</li>
+                  <li>Art. 13.1.c GDPR</li>
                 </ul>
               </div>
 
               <div class="category-card">
-                <h4>✅ Consent</h4>
+                <h4>👥 Data Sharing</h4>
                 <ul>
-                  <li>Cookie banner presence</li>
-                  <li>Reject option availability</li>
-                  <li>Granular controls</li>
-                  <li>Pre-checked boxes</li>
+                  <li>Recipients disclosure</li>
+                  <li>International transfers</li>
+                  <li>Third-party sharing</li>
+                  <li>Art. 13.1.e-f GDPR</li>
                 </ul>
               </div>
 
               <div class="category-card">
-                <h4>🔐 Security</h4>
+                <h4>⚖️ User Rights</h4>
                 <ul>
-                  <li>HTTPS usage</li>
-                  <li>Security headers</li>
-                  <li>Mixed content</li>
-                  <li>HSTS configuration</li>
+                  <li>Right to access</li>
+                  <li>Right to erasure</li>
+                  <li>Right to object</li>
+                  <li>Art. 15-22 GDPR</li>
                 </ul>
               </div>
 
               <div class="category-card">
-                <h4>📋 Privacy Policy</h4>
+                <h4>📋 Transparency</h4>
                 <ul>
-                  <li>Data controller info</li>
-                  <li>User rights disclosure</li>
-                  <li>Data retention periods</li>
-                  <li>12+ GDPR requirements</li>
+                  <li>Retention periods</li>
+                  <li>Automated decisions</li>
+                  <li>Cookie disclosure</li>
+                  <li>Child privacy</li>
                 </ul>
               </div>
             </div>
@@ -156,10 +144,13 @@
             <p>Privacy Checker is open source and runs entirely in your browser. No data is sent to external servers. All analysis happens client-side, ensuring your privacy policies remain completely private.</p>
 
             <h3>Simple & Fast</h3>
-            <p>Just upload or paste a privacy policy and get instant GDPR compliance feedback. No accounts, no setup, no complexity.</p>
+            <p>Just paste your privacy policy text and get instant GDPR compliance feedback with specific article references. No accounts, no setup, no complexity - results in seconds.</p>
 
             <h3>About the Creator</h3>
-            <p>Created by <a href="https://www.linkedin.com/in/nikki-ricks/" target="_blank" rel="noopener">Nikki Ricks</a>, a privacy and compliance professional dedicated to making GDPR compliance accessible and understandable.</p>
+            <div class="creator-section">
+              <img src="images/headshot.jpg" alt="Nikki Ricks" class="creator-headshot">
+              <p>Created by <a href="https://www.linkedin.com/in/nikki-ricks/" target="_blank" rel="noopener">Nikki Ricks</a>, a privacy and compliance professional dedicated to making GDPR compliance accessible and understandable.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -190,6 +181,15 @@
           </div>
         </div>
 
+        <div id="financialRiskSection" class="financial-risk-section" style="display: none;"></div>
+
+        <!-- GDPR Comparison Section -->
+        <div id="gdprComparison" class="gdpr-comparison-section" style="display: none;">
+          <h2>GDPR Requirements vs Your Policy</h2>
+          <p class="comparison-subtitle">Side-by-side comparison of GDPR citations and what's missing</p>
+          <div id="comparisonContainer" class="comparison-container"></div>
+        </div>
+
         <div id="checksContainer" class="checks-container"></div>
 
         <div class="action-buttons">
@@ -209,7 +209,129 @@
     <footer class="footer">
       <p>Privacy Checker - Open Source GDPR Compliance Tool</p>
       <p class="disclaimer">For informational purposes only. Not legal advice. Consult legal counsel for compliance questions.</p>
+      <p class="footer-links">
+        <a href="#" id="privacyPolicyLink" class="footer-link">Privacy Policy</a>
+      </p>
     </footer>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Privacy Policy - Privacy Checker</h2>
+        <button class="modal-close" id="closeModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="privacy-policy-content">
+          <p class="last-updated">Last updated: October 27, 2025</p>
+
+          <h3>1. Data Controller Identity</h3>
+          <p>Privacy Checker is operated by Nikki Ricks ("we", "our", "us"), the data controller responsible for your personal data. Our company name is Privacy Checker, and we are the organization that determines how and why your data is processed.</p>
+          <p><strong>Contact details:</strong> You can contact us via email at nikkiricks@gmail.com or through our website contact form.</p>
+
+          <h3>2. Data Protection Officer</h3>
+          <p>We have appointed a Data Protection Officer (DPO) who is responsible for overseeing our data protection strategy. You can contact our privacy officer or Data Protection Officer at nikkiricks@gmail.com for any questions about how we process your personal data.</p>
+
+          <h3>3. Purpose of Processing and Legal Basis</h3>
+          <p>We collect and process your personal data for the following purposes:</p>
+          <ul>
+            <li>To provide our privacy policy analysis service</li>
+            <li>To improve our service and user experience</li>
+            <li>For legitimate interest in understanding how our service is used</li>
+          </ul>
+          <p>Our lawful basis for processing your data includes your consent, our legitimate interests in operating and improving the service, and compliance with legal obligations under GDPR and other data protection laws.</p>
+
+          <h3>4. Personal Data We Collect</h3>
+          <p>We collect the following categories of personal data and information collected from you:</p>
+          <ul>
+            <li>Privacy policy text you paste or upload for analysis (processed locally in your browser)</li>
+            <li>Technical data we collect including IP address, browser type, and device information</li>
+            <li>Usage data about how you interact with our service</li>
+          </ul>
+
+          <h3>5. Data Recipients and Third-Party Sharing</h3>
+          <p>We may share or disclose your personal data with the following recipients and third parties:</p>
+          <ul>
+            <li>Service providers who help us operate our website</li>
+            <li>Analytics providers to understand service usage</li>
+            <li>Legal authorities when required by law</li>
+          </ul>
+          <p>We do not sell your personal data to third parties.</p>
+
+          <h3>6. International Data Transfers</h3>
+          <p>Your data may be transferred to and processed in countries outside the EU through international transfer mechanisms. When we transfer data to a third country or international organization, we ensure appropriate safeguards are in place, including Standard Contractual Clauses approved by the European Commission for cross-border data transfers.</p>
+
+          <h3>7. Data Retention Period</h3>
+          <p>We retain your personal data for as long as necessary to fulfill the purposes outlined in this policy. Our retention period varies depending on the type of data:</p>
+          <ul>
+            <li>Analysis data: Processed locally and not stored on our servers</li>
+            <li>Technical logs: We keep your data for up to 12 months</li>
+            <li>Account data (if applicable): How long you maintain your account plus 30 days</li>
+          </ul>
+          <p>Our storage period is determined based on legal requirements and business needs.</p>
+
+          <h3>8. Your Rights (Data Subject Rights)</h3>
+          <p>Under GDPR, you have the following rights regarding your personal data:</p>
+          <ul>
+            <li><strong>Right to access:</strong> You can request a copy of your personal data</li>
+            <li><strong>Right to erasure:</strong> You can request deletion of your data</li>
+            <li><strong>Right to object:</strong> You can object to certain processing activities</li>
+            <li>Right to rectification of inaccurate data</li>
+            <li>Right to restriction of processing</li>
+            <li>Right to data portability</li>
+            <li>Right to withdraw consent at any time</li>
+          </ul>
+          <p>To exercise your data subject rights, please contact us at nikkiricks@gmail.com.</p>
+
+          <h3>9. Right to Lodge a Complaint</h3>
+          <p>You have the right to lodge a complaint with a supervisory authority if you believe our processing of your personal data violates data protection laws. You can contact your local data protection authority or regulator. In the UK, this is the Information Commissioner's Office (ICO). In other EU countries, please contact your national supervisory authority.</p>
+
+          <h3>10. Automated Decision-Making and Profiling</h3>
+          <p>We do not use automated decision-making or profiling that produces legal effects or similarly significantly affects you. Any algorithmic processing is limited to basic analytics and does not involve automated decisions about individuals.</p>
+
+          <h3>11. Source of Personal Data</h3>
+          <p>We collect personal data from the following sources:</p>
+          <ul>
+            <li>Directly from you when you use our service</li>
+            <li>Where we obtained data from third-party analytics providers</li>
+            <li>Data collected from publicly accessible sources when necessary</li>
+          </ul>
+
+          <h3>12. Cookies and Tracking Technologies</h3>
+          <p>Our website uses cookies to enhance your experience and analyze site usage. Cookies are small text files stored on your device. We use the following types of cookies:</p>
+          <ul>
+            <li><strong>Essential cookies:</strong> Required for the website to function</li>
+            <li><strong>Analytics cookies:</strong> Help us understand how visitors use our site</li>
+            <li><strong>Preference cookies:</strong> Remember your settings and preferences</li>
+          </ul>
+          <p>You can control cookie settings through your browser preferences. Please note that disabling certain cookies may affect website functionality.</p>
+
+          <h3>13. Children's Privacy Protection</h3>
+          <p>Our service is not intended for children under the age of 16. We do not knowingly collect personal data from minors or children under 13 years of age. If you are a parent or guardian and believe your child has provided us with personal data, please contact us immediately. If we discover that a child under 16 has provided us with personal data without parental consent, we will delete such information.</p>
+
+          <h3>14. Data Security</h3>
+          <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. Your privacy policy analysis is performed entirely in your browser using client-side JavaScript, ensuring your data never leaves your device.</p>
+
+          <h3>15. Changes to This Privacy Policy</h3>
+          <p>We may update this privacy policy from time to time. The "Last updated" date at the top of this policy indicates when it was last revised. We encourage you to review this policy periodically.</p>
+
+          <h3>16. Contact Us</h3>
+          <p>If you have any questions about this privacy policy or our data practices, please contact us:</p>
+          <ul>
+            <li>Email: nikkiricks@gmail.com</li>
+            <li>Address: Available upon request</li>
+            <li>Phone: Available upon request</li>
+          </ul>
+
+          <div class="test-policy-section">
+            <h3>🔍 Test This Policy</h3>
+            <p>Want to see how our privacy policy scores? Copy the text above and paste it into our analyzer!</p>
+            <button id="testOurPolicy" class="btn btn-primary">Analyze Our Privacy Policy</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="lib/policy-analyzer.js"></script>

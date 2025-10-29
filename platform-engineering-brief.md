@@ -1084,6 +1084,6 @@ resource "railway_service" "api" {
 ---
 
 **Document Version:** 1.0
-**Last Updated:** October 17, 2024
+**Last Updated:** October 27, 2025
 **Author:** Platform Engineering Team
 **Status:** Draft for Review

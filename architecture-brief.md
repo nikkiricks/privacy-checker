@@ -250,7 +250,7 @@ Body: {
 Response: {
   "score": 85,
   "checks": [...],
-  "timestamp": "2024-10-17T...",
+  "timestamp": "2025-10-27T...",
   "analysisId": "uuid"
 }
 
@@ -333,7 +333,7 @@ GET /api/v1/usage (for API tier limits)
 - Privacy preservation (no data sent to servers for free tier)
 - Zero infrastructure costs for free users
 - Instant results (no network latency)
-- Can still work offline
+- Can still work offline (TODO: Test to confirm TBD: Confirmed By User on MMM DD, YYY)
 - Marketing advantage ("Your data never leaves your browser")
 
 **Implementation:**
@@ -628,6 +628,6 @@ privacy-checker/
 ---
 
 **Document Version:** 1.0
-**Last Updated:** October 17, 2024
+**Last Updated:** October 27, 2025
 **Author:** Technical Team
 **Status:** Draft for Review
